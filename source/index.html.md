@@ -19,80 +19,79 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the HostelBook API! You can use our API to access Hostel API endpoints, which can get information on hostels around JKUAT in our database.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
 # Authentication
 
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'hostel'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Hostel::APIClient.authorize!('hostelbook')
 ```
 
 ```python
-import kittn
+import hostel
 
-api = kittn.authorize('meowmeowmeow')
+api = hostel.authorize('hostelbook')
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: hostelbook"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const hostel = require('hostel');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = hostel.authorize('hostelbook');
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `hostelbook` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+HostelBook uses API keys to allow access to the API. You can register a new HostelBook API key at our [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+HostelBook expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: hostelbook`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>hostelbook</code> with your personal API key.
 </aside>
 
-# Kittens
+# HOSTELS
 
-## Get All Kittens
+## Get All Hostels
 
 ```ruby
-require 'kittn'
+require 'hostels'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+api = hostel::APIClient.authorize!('hostelbook')
+api.hostels.get
 ```
 
 ```python
-import kittn
+import hostel
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+api = hostel.authorize('hostelbook')
+api.hostels.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl "http://example.com/api/hostelbook"
+  -H "Authorization: hostelbook"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const hostel = require('hostel');
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+let api = hostel.authorize('hostelbook');
+let hostels = api.hostels.get();
 ```
 
 > The above command returns JSON structured like this:
